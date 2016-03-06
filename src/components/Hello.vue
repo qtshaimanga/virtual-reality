@@ -18,5 +18,7 @@ export default {
 
 
 <style>
-
+.hello{
+  color: red;
+}
 </style>

@@ -2,6 +2,12 @@ var express = require('express')
 var webpack = require('webpack')
 var config = require('./webpack.dev.conf')
 
+//var articles = require('./api/articles')
+//------
+//var data = require('./data')
+// var path or fs ?
+
+
 var app = express()
 var compiler = webpack(config)
 
@@ -22,8 +28,9 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(require('webpack-hot-middleware')(compiler))
 
 
-/* ADD ROUTES */
-
+/* ROUTES */
+//app.get('/api/articles', articles.list);
+//app.get('/api/articles/:name', articles.findByName);
 
 
 app.listen(9000, 'localhost', function (err) {

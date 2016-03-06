@@ -22,16 +22,17 @@ npm test
 #### Back
 > csv to json :
 ``` bash
-node back/converter/converter.js
+node build/converter/converter.js
 ```
 
 > routes :
-- /articles
-- /
+- /api/articles
+- /api/articles/:name
 - ..
 
 #### Front
 >components
+- articles.vue
 - ...
 
 #### Dependencies
@@ -41,6 +42,7 @@ node back/converter/converter.js
   - ESlinter
   - webpack
   - karma
+  - lowdb
   - gsap
   - vue-resource
   - ...
