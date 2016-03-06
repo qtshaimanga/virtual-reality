@@ -22,10 +22,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(require('webpack-hot-middleware')(compiler))
 
 
-/* ROUTES */
-
-
-
+/* ADD ROUTES */
 
 
 

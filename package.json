@@ -1,5 +1,5 @@
 {
-  "name": "Virtual Reality Project",
+  "name": "Virtual-Reality-Project",
   "description": "Virtual Reality Project : What's new in virtual reality ? (use vue-cli)",
   "author": "kirgan, quentin, clément, lovis",
   "scripts": {
@@ -48,6 +48,7 @@
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.0.0",
     "vue-style-loader": "^1.0.0",
+    "vueify": "^8.3.5",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0"

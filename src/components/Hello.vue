@@ -9,9 +9,14 @@
 export default {
   data () {
     return {
-      msg: 'Test get data with npm JSON + autoreload + creat component + add tween and three + JSLinter info'
+      msg: 'Hello World'
     }
   }
 }
 
 </script>
+
+
+<style>
+
+</style>
