@@ -21,10 +21,10 @@ app.use(require('webpack-dev-middleware')(compiler, {
 // compilation error display
 app.use(require('webpack-hot-middleware')(compiler))
 
-app.listen(8080, 'localhost', function (err) {
-  if (err) {
-    console.log(err)
-    return
-  }
-  console.log('Listening at http://localhost:8080')
+app.listen(9000, 'localhost', function (err) {
+    if (err) {
+      console.log(err)
+      return
+    }
+  console.log('Listening at http://localhost:9000')
 })

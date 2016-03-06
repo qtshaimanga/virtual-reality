@@ -22,16 +22,6 @@
 		<button v-on:click="reverseMessage">Reverse Message</button>
 	</div>
 
-	<div id="todoList">
-  		<input v-model="newTodo" v-on:keyup.enter="addTodo">
-  		<ul>
-   			<li v-for="todoList in todoLists">
-      			<span>{{ todoList.text }}</span>
-      			<button v-on:click="removeTodo($index)">X</button>
-    		</li>
-  		</ul>
-	</div>
-
 </template>
 
 <script>
@@ -53,14 +43,14 @@ export default {
     ]
     }
   },
+  // LINTER --->  erreur de method + error WEBPACK
   methods: {
-  	reverseMessage: function () { 
+  	reverseMessage: function () {
   		this.info = this.info.split('').reverse().join('')
   	}
   }
-
-  */
 }
+
 </script>
 
 <style>
@@ -68,6 +58,3 @@ export default {
 		background-color: red;
 	}
 </style>
-
-
-
