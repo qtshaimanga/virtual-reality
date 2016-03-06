@@ -22,7 +22,7 @@ npm test
 #### Back
 > csv to json :
 ``` bash
-npm run ./*/*/converter.js
+node back/converter/converter.js
 ```
 
 > routes :

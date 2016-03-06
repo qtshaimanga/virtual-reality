@@ -21,6 +21,14 @@ app.use(require('webpack-dev-middleware')(compiler, {
 // compilation error display
 app.use(require('webpack-hot-middleware')(compiler))
 
+
+/* ROUTES */
+
+
+
+
+
+
 app.listen(9000, 'localhost', function (err) {
     if (err) {
       console.log(err)
