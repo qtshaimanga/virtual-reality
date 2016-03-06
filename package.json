@@ -1,14 +1,16 @@
 {
-  "name": "testing-vue-cli",
-  "description": "A Vue.js project",
-  "author": "quentin tshaimanga",
+  "name": "Virtual Reality Project",
+  "description": "Virtual Reality Project : What's new in virtual reality ? (use vue-cli)",
+  "author": "kirgan, quentin, clément, lovis",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "rimraf dist && webpack --progress --hide-modules --config build/webpack.prod.conf.js",
     "test": "karma start build/karma.conf.js --single-run"
   },
   "dependencies": {
-    "vue": "^1.0.15"
+    "gsap": "^1.18.2",
+    "vue": "^1.0.15",
+    "vue-resource": "^0.7.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -19,6 +21,7 @@
     "babel-runtime": "^5.8.0",
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.23.0",
+    "csvtojson": "^0.5.2",
     "eslint": "^1.10.3",
     "eslint-friendly-formatter": "^1.2.2",
     "eslint-loader": "^1.2.0",
@@ -27,6 +30,7 @@
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.4",
     "function-bind": "^1.0.2",
+    "gsap": "^1.18.2",
     "html-webpack-plugin": "^1.7.0",
     "inject-loader": "^2.0.1",
     "jasmine-core": "^2.4.1",

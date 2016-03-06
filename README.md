@@ -1,6 +1,6 @@
-# testing-vue-cli
-
-> A Vue.js project
+# What's new in virtual reality ?
+> By Lovis, Kirgan, Clément, Quentin
+> Uses vue-cli
 
 ## Build Setup
 
@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:9000
 npm run dev
 
 # build for production with minification
@@ -18,4 +18,29 @@ npm run build
 npm test
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Informations
+#### Back
+> csv to json :
+``` bash
+npm run ./*/*/converter.js
+```
+
+> routes :
+- /articles
+- /
+- ..
+
+#### Front
+>components
+- ...
+
+#### Dependencies
+>     
+  - express
+  - babel
+  - ESlinter
+  - webpack
+  - karma
+  - gsap
+  - vue-resource
+  - ...
