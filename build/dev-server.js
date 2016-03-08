@@ -12,7 +12,7 @@ var app = express()
 var compiler = webpack(config)
 
 // handle fallback for HTML5 history API
-//app.use(require('connect-history-api-fallback')())
+//app.use(require('connect-history-api-fallback')())    // lock your road
 //
 // // serve webpack bundle output
 app.use(require('webpack-dev-middleware')(compiler, {
@@ -30,10 +30,11 @@ app.use(require('webpack-hot-middleware')(compiler))
 
 /* ROUTES API */
 app.get('/yolo/', function (req, res) {
-  res.send('Hello World!');
+  res.send('Fuck you bitch !');
 });
+
 app.get('/api/articles/', articles.list);
-//app.get('/api/articles/:name', articles.findByName);
+app.get('/api/articles/:title', articles.findByTitle);
 
 // var datum = JSON.parse(fs.readFileSync(path.resolve(__dirname, './data/articles.json') ));
 // console.log(datum);
