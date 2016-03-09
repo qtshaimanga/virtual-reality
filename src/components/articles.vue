@@ -1,17 +1,27 @@
 <template>
   <div class="articles">
-    <h1>{{ articles }}</h1>
+    <div v-for="article in articlesList.data">
+    <h5>{{ article.titre }}</h5>
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
-  data () {
-    return {
-      articles: 'ICI articles'
+  data: {
+     articlesList: ''
+  },
+
+  ready: function() {
+
+      this.$http({url:'/api/articles', method: 'GET'}).then(function (response) {
+          this.$set('articlesList', response)
+      }, function (response) {
+          console.log("bad request /api/articles");
+      });
+
     }
-  }
 }
 
 </script>

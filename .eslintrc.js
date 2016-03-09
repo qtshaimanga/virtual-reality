@@ -160,14 +160,14 @@ module.exports = {
     'padded-blocks': 0,
     'prefer-const': 0,
     'quote-props': 0,
-    'quotes': [2, 'single', 'avoid-escape'],
+    'quotes': [0, 'single', 'avoid-escape'],  //change
     'radix': 2,
-    'semi': [2, 'never'],
+    'semi': [0, 'never'],   //change
     'semi-spacing': 0,
     'sort-vars': 0,
     'space-after-keywords': [2, 'always'],
     'space-before-blocks': [2, 'always'],
-    'space-before-function-paren': [2, 'always'],
+    'space-before-function-paren': [0, 'always'],   //change
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
     'space-return-throw-case': 2,
