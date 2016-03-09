@@ -1,13 +1,24 @@
 <template>
-
+  <div class="articles">
+    <h1>{{ articles }}</h1>
+  </div>
 </template>
 
 <script>
 
+export default {
+  data () {
+    return {
+      articles: 'ICI articles'
+    }
+  }
+}
 
 </script>
-  //See this -> http://jsfiddle.net/makuchy/t40Lcgqk/
+
+
 <style>
-
-
+.articles{
+  color: green;
+}
 </style>

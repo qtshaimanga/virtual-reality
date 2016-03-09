@@ -52,8 +52,8 @@ module.exports = {
     'generator-star-spacing': [2, { 'before': true, 'after': true }],
     'guard-for-in': 0,
     'handle-callback-err': [2, '^(err|error)$' ],
-    'indent': [2, 2, { 'SwitchCase': 1 }],
-    'key-spacing': [2, { 'beforeColon': false, 'afterColon': true }],
+    'indent': [0, 0, { 'SwitchCase': 1 }],  //change
+    'key-spacing': [0, { 'beforeColon': false, 'afterColon': true }], //change
     'linebreak-style': 0,
     'lines-around-comment': 0,
     'max-nested-callbacks': 0,
@@ -105,7 +105,7 @@ module.exports = {
     'no-mixed-spaces-and-tabs': 2,
     'no-multi-spaces': 2,
     'no-multi-str': 2,
-    'no-multiple-empty-lines': [2, { 'max': 1 }],
+    'no-multiple-empty-lines': [0, { 'max': 1 }],
     'no-native-reassign': 2,
     'no-negated-in-lhs': 2,
     'no-nested-ternary': 0,
@@ -137,7 +137,7 @@ module.exports = {
     'no-ternary': 0,
     'no-this-before-super': 2,
     'no-throw-literal': 2,
-    'no-trailing-spaces': 2,
+    'no-trailing-spaces': 0,
     'no-undef': 2,
     'no-undef-init': 2,
     'no-undefined': 0,
