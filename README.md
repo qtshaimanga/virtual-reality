@@ -1,6 +1,6 @@
 # What's new in virtual reality ?
 > By Lovis, Kirgan, Clément, Quentin
-> Uses vue-cli
+> Uses vue-cli and more
 
 ## Build Setup
 
@@ -20,28 +20,30 @@ npm test
 
 ## Informations
 #### Back
-> csv to json :
+>#### csv to json :
 ``` bash
 node build/converter/converter.js
 ```
 
-> routes :
+>#### roads :
 - /api/articles
-- /api/articles/:name
+- /api/articles/:title
 - ..
 
 #### Front
 >components
-- articles.vue
+- Articles.vue
+- Informations.vue
 - ...
 
 #### Dependencies
 >     
   - express
+  - webpack
   - babel
   - ESlinter
-  - webpack
   - karma
+  - vue-loader
   - lowdb
   - gsap
   - vue-resource
