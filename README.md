@@ -1,6 +1,6 @@
 # What's new in virtual reality ?
-> By Lovis, Kirgan, Clément, Quentin
-> Uses vue-cli and more
+> By Lovis, Kirgan, Clément, Quentin.
+> (Uses vue-cli and more)
 
 ## Build Setup
 
