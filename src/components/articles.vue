@@ -1,10 +1,13 @@
 <template>
   <div class="articles">
-    <div v-for="article in articlesList.data">
-    <h5>{{ article.titre }}</h5>
+    <div id="article" v-for="article in articlesList.data">
+      <h5>{{ article.date }}</h5>
+      <h5>{{ article.titre }}</h5>
+      <h5>{{ article.description }}</h5>
     </div>
   </div>
 </template>
+
 
 <script>
 
@@ -28,7 +31,16 @@ export default {
 
 
 <style>
+
 .articles{
   color: green;
 }
+
+#article{
+  color: red;
+  border-style: solid;
+  border-color: black;
+  margin: 1em;
+}
+
 </style>
