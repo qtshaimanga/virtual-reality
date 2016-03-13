@@ -20,7 +20,12 @@ export default {
 
 
 <style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic);
+
 body {
-  font-family: Helvetica, sans-serif;
+	font-family: 'Open sans', sans-serif;
+	background-color: black;
+	margin: 0;
 }
+
 </style>
