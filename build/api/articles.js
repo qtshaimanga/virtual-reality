@@ -7,13 +7,13 @@ var _= require('lodash');
         );
     }
 
-    exports.findByTitle = function findByTitle(req, res) {
-        var article = req.params.title;
+    exports.findByTag = function findByTag(req, res) {
+        var article = req.params.tag;
         var resultat =(
         data
              .chain()
              .filter(function(articles){
-                 if ('titre' in articles && article.indexOf(articles.titre) > -1) {
+                 if ('tag' in articles && article.indexOf(articles.tag) > -1) {
                     return true;
                     } else {
                       return false;
@@ -26,9 +26,6 @@ var _= require('lodash');
 
 
     exports.tagsList = function tagsList(req, res){
-
-        //var result = _.groupBy( data, 'date');
-
         var result = _(data).groupBy(function(row){
             return row.tag;
         });
@@ -39,5 +36,4 @@ var _= require('lodash');
         });
 
         res.json(result);
-
     }

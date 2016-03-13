@@ -34,7 +34,7 @@ app.get('/yolo/', function (req, res) {
 });
 
 app.get('/api/articles/', articles.list);
-app.get('/api/articles/:title', articles.findByTitle);
+app.get('/api/articles/:tag', articles.findByTag);
 app.get('/api/tags', articles.tagsList);
 
 
