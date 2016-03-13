@@ -1,20 +1,31 @@
 <template>
-  <div id="app">
-    <articles></articles>
-    <!--<img class="logo" src="./assets/logo.png">-->
-  </div>
+<div id="app">
+	<div class="line-left"></div>
+	<div class="mid-line"></div>
+	<div class="line-right"></div>
+	<intro></intro>
+	<informations></informations>
+	<articles></articles>
+	<!--<img class="logo" src="./assets/logo.png">-->
+</div>
 </template>
 
 
 <script>
 
-import Articles from './components/Articles'
 import Intro from './components/Intro'
+import Informations from './components/Informations'
+import Articles from './components/Articles'
 
 export default {
-  components: {
-    Articles, Intro
-  }
+	components: {
+		Intro, Informations, Articles
+	}, 
+
+	ready: function() {
+		alert('hello');
+	}
+
 }
 
 </script>

@@ -35,7 +35,6 @@
 <style lang="sass">
 $grey: #3e3e3e;
 
-
 #intro {
 	width: 100%;
 	height: 100vh;
