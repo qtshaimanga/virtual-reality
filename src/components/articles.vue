@@ -1,6 +1,6 @@
 <template>
   <div id="tags" v-for="tag in tagsList.data">
-    <button v-on:click="selectedTags" value="{{ tag.tag}}"> {{ tag.tag}}</button>
+    <button class="deselected" v-on:click="selectedTags" value="{{ tag.tag}}" selected="deselect"> {{ tag.tag}}</button>
   </div>
 
   <div class="articles">
@@ -38,15 +38,25 @@ export default {
   },
   methods: {
     selectedTags: function (event) {
-      console.log(event);
+      var select = event.target.getAttribute("selected");
+      var tag = ""
 
-      var tag = String(event.target.value)
+      if(select == "deselect"){
+        tag = String(event.target.value)
+        event.target.setAttribute("selected", "select")
+        event.target.setAttribute("class", "selected")
+      }else{
+        tag = ""
+        event.target.setAttribute("selected", "deselect")
+        event.target.setAttribute("class", "deselected")
+      }
 
       this.$http({url:'./articles/'+ tag, method:'GET'}).then(function (response) {
           this.$set('articlesList', response)
       }, function (response) {
           console.log("bad request /api/articles");
       });
+
     }
   }
 
@@ -67,4 +77,6 @@ $blue: #3bbfce;
   border-color: black;
   margin: 1em;
 }
+
+
 </style>
