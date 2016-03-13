@@ -23,3 +23,21 @@ var _= require('lodash');
         );
         res.json(resultat);
     }
+
+
+    exports.tagsList = function tagsList(req, res){
+
+        //var result = _.groupBy( data, 'date');
+
+        var result = _(data).groupBy(function(row){
+            return row.tag;
+        });
+        result = _(result).map(function(name, tags) {
+              return {
+                  tag : tags
+              }
+        });
+
+        res.json(result);
+
+    }

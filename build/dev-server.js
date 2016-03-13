@@ -35,6 +35,8 @@ app.get('/yolo/', function (req, res) {
 
 app.get('/api/articles/', articles.list);
 app.get('/api/articles/:title', articles.findByTitle);
+app.get('/api/tags', articles.tagsList);
+
 
 // var datum = JSON.parse(fs.readFileSync(path.resolve(__dirname, './data/articles.json') ));
 // console.log(datum);
