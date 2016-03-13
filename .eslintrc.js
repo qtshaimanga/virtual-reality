@@ -138,7 +138,7 @@ module.exports = {
     'no-this-before-super': 2,
     'no-throw-literal': 2,
     'no-trailing-spaces': 0,
-    'no-undef': 2,
+    'no-undef': 0,
     'no-undef-init': 2,
     'no-undefined': 0,
     'no-underscore-dangle': 0,
@@ -169,7 +169,7 @@ module.exports = {
     'space-before-blocks': [2, 'always'],
     'space-before-function-paren': [0, 'always'],   //change
     'space-in-parens': [2, 'never'],
-    'space-infix-ops': 2,
+    'space-infix-ops': 0,
     'space-return-throw-case': 2,
     'space-unary-ops': [2, { 'words': true, 'nonwords': false }],
     'spaced-comment': [2, 'always', { 'markers': ['global', 'globals', 'eslint', 'eslint-disable', '*package', '!'] }],
