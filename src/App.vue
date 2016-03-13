@@ -9,10 +9,11 @@
 <script>
 
 import Articles from './components/Articles'
+import Intro from './components/Intro'
 
 export default {
   components: {
-    Articles
+    Articles, Intro
   }
 }
 
