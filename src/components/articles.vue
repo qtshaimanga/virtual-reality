@@ -59,7 +59,7 @@
 	</div>
 </div>
 
-
+<div id="timeline">
   <div id="tags" v-for="tag in tagsList.data">
     <button class="deselected" v-on:click="selectedTags" value="{{ tag.tag}}" selected="deselect"> {{ tag.tag}}</button>
   </div>
@@ -71,6 +71,8 @@
       <h5>{{ article.description }}</h5>
     </div>
   </div>
+</div>
+
 </template>
 
 
