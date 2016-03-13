@@ -46,7 +46,7 @@ module.exports = {
     'dot-location': [2, 'property'],
     'dot-notation': 0,
     'eol-last': 2,
-    'eqeqeq': [2, 'allow-null'],
+    'eqeqeq': [0, 'allow-null'],    //change
     'func-names': 0,
     'func-style': 0,
     'generator-star-spacing': [2, { 'before': true, 'after': true }],
@@ -64,7 +64,7 @@ module.exports = {
     'no-array-constructor': 2,
     'no-caller': 2,
     'no-catch-shadow': 0,
-    'no-cond-assign': 2,
+    'no-cond-assign': 0,    //change
     'no-console': 0,
     'no-constant-condition': 0,
     'no-continue': 0,
@@ -146,7 +146,7 @@ module.exports = {
     'no-unneeded-ternary': 2,
     'no-unreachable': 2,
     'no-unused-expressions': 0,
-    'no-unused-vars': [2, { 'vars': 'all', 'args': 'none' }],
+    'no-unused-vars': [0, { 'vars': 'all', 'args': 'none' }], //change 2
     'no-use-before-define': 0,
     'no-var': 0,
     'no-void': 0,
@@ -165,8 +165,8 @@ module.exports = {
     'semi': [0, 'never'],   //change
     'semi-spacing': 0,
     'sort-vars': 0,
-    'space-after-keywords': [2, 'always'],
-    'space-before-blocks': [2, 'always'],
+    'space-after-keywords': [0, 'always'],    //change
+    'space-before-blocks': [0, 'always'],   //change
     'space-before-function-paren': [0, 'always'],   //change
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 0,

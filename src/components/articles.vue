@@ -16,9 +16,13 @@
 
 <script>
 export default {
+  props: {
+    tab: Array
+  },
   data: {
     tagsList:'',
-    articlesList: ''
+    articlesList: '',
+    tab: 'art'
   },
 
   ready: function() {
@@ -35,20 +39,22 @@ export default {
           console.log("bad request /api/articles");
       });
 
+
   },
   methods: {
     selectedTags: function (event) {
       var select = event.target.getAttribute("selected");
       var tag = ""
 
+
       if(select == "deselect"){
         tag = String(event.target.value)
-        event.target.setAttribute("selected", "select")
-        event.target.setAttribute("class", "selected")
+          event.target.setAttribute("selected", "select")
+          event.target.setAttribute("class", "selected")
       }else{
         tag = ""
-        event.target.setAttribute("selected", "deselect")
-        event.target.setAttribute("class", "deselected")
+          event.target.setAttribute("selected", "deselect")
+          event.target.setAttribute("class", "deselected")
       }
 
       this.$http({url:'./articles/'+ tag, method:'GET'}).then(function (response) {
@@ -78,5 +84,11 @@ $blue: #3bbfce;
   margin: 1em;
 }
 
+.deselected{
+background-color: red;
+}
 
+.selected{
+background-color: yellow;
+}
 </style>
