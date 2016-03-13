@@ -276,8 +276,6 @@ $grey: #3e3e3e;
 }
 
 
-
-
 .deselected{
 background-color: red;
 }
