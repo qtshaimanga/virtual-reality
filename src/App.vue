@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <articles></articles>
-    <!--<img class="logo" src="./assets/logo.png">-->
   </div>
 </template>
 
@@ -13,7 +12,8 @@ import Intro from './components/Intro'
 
 export default {
   components: {
-    Articles, Intro
+    Articles,
+    Intro
   }
 }
 
