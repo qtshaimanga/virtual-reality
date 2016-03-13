@@ -109,16 +109,20 @@ export default {
       var select = event.target.getAttribute("selected");
       var tag = ""
 
-
       if(select == "deselect"){
-        tag = String(event.target.value)
           event.target.setAttribute("selected", "select")
           event.target.setAttribute("class", "selected")
       }else{
-        tag = ""
           event.target.setAttribute("selected", "deselect")
           event.target.setAttribute("class", "deselected")
       }
+
+      var btnSelect = document.getElementsByClassName("selected")
+      var tab = []
+      for (var i =0; i<btnSelect.length; i++){
+        tab.push(btnSelect[i].value)
+      }
+      tag = tab
 
       this.$http({url:'./articles/'+ tag, method:'GET'}).then(function (response) {
           this.$set('articlesList', response)
