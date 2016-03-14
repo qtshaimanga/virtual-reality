@@ -54,8 +54,8 @@ export default {
 
 		// Material
 		var pinkMat = new THREE.MeshPhongMaterial({
-			color      :  new THREE.Color("rgb(62, 62, 62)"),
-			emissive   :  new THREE.Color("rgb(0, 0, 0)"),
+			color      :  new THREE.Color("rgb(70, 102, 102)"),
+			emissive   :  new THREE.Color("rgb(10, 0, 0)"),
 			specular   :  new THREE.Color("rgba(62, 62, 62)"),
 			shininess  :  10,
 			shading    :  THREE.FlatShading,
@@ -69,7 +69,7 @@ export default {
 		L1.position.x = 100;
 		scene.add(L1);
 
-		var L2 = new THREE.PointLight(0xffffff, 0.8);
+		var L2 = new THREE.PointLight(0xffffff, 1);
 		L2.position.z = 200;
 		L2.position.y = 50;
 		L2.position.x = -100;
@@ -81,14 +81,14 @@ export default {
 		scene.add(Ico);
 
 		function update(){
-		Ico.rotation.x+=2/100;
-		Ico.rotation.y+=2/100;
+		Ico.rotation.x+=2/300;
+		Ico.rotation.y+=2/300;
 		}
 
 		// Render
 		function render() {
-		requestAnimationFrame(render);      
-		renderer.render(scene, camera); 
+		requestAnimationFrame(render);
+		renderer.render(scene, camera);
 		update();
 		}
 
@@ -149,7 +149,7 @@ $grey: #3e3e3e;
 	.col-left {
 
 		#geometry {
-			z-index:  10;
+			z-index:  -5;
 			position: absolute
 		}
 
@@ -163,7 +163,7 @@ $grey: #3e3e3e;
 		}
 
 		.name {
-			font-size: 30px;
+			font-size: 24px;
 			position: absolute;
 			// display: none;
 

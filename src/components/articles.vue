@@ -165,7 +165,7 @@ $dark : #333333;
 
 /*--Timeline-Container--*/
 #timeline{
-	margin-top:20em;
+	margin-top:1em;
 }
 
 /*--TAG--*/
@@ -213,13 +213,13 @@ $dark : #333333;
 
 
 /*--ARTICLES--*/
-p #business { background-color: $bleu; padding:0.5em;}
-p #art {  background-color: $rouge; padding:0.5em;}
-p #jeu {  background-color: $violet; padding:0.5em;}
-p #tech { background-color: $saumon; padding:0.5em; }
-p #insolite {  background-color: $rose; padding:0.5em; }
-p #social {  background-color: $vert; padding:0.5em; }
-p #marketing {  background-color: $bleu; padding:0.5em; }
+p #business { background-color: $bleu; padding:0.5em; text-transform: uppercase;}
+p #art {  background-color: $rouge; padding:0.5em; text-transform: uppercase;}
+p #jeu {  background-color: $violet; padding:0.5em; text-transform: uppercase;}
+p #tech { background-color: $saumon; padding:0.5em; text-transform: uppercase;}
+p #insolite {  background-color: $rose; padding:0.5em; text-transform: uppercase;}
+p #social {  background-color: $vert; padding:0.5em; text-transform: uppercase;}
+p #marketing {  background-color: $bleu; padding:0.5em; text-transform: uppercase;}
 
 .articles #article{
   color: $gray;
@@ -241,6 +241,7 @@ p #marketing {  background-color: $bleu; padding:0.5em; }
 .articles #article h5 {
   text-align: left;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .articles #article #date {

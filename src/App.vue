@@ -29,7 +29,7 @@ export default {
 	},
 	ready: function() {
 
-		var height = app.offsetHeight
+		var height = app.offsetHeight;
 		var c1 = document.getElementById("canvas");
 		var c1_context = c1.getContext("2d");
 		c1_context.moveTo(300, 0);
