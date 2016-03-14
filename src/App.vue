@@ -16,6 +16,7 @@
 import Intro from './components/Intro'
 import Informations from './components/Informations'
 import Articles from './components/Articles'
+import $ from 'jquery'
 
 export default {
 	components: {
@@ -23,14 +24,17 @@ export default {
 	}, 
 
 	ready: function() {
+		// var totalHeight = $("#intro").height() + $("#informations").height() + $("#timeline").height();
+		// console.log($("#timeline").height());
 
+		// $(".line-left, .line-right, .mid-line:not(.big)").css("height", totalHeight);
 	}
 }
 
 </script>
 
 
-<style>
+<style lang="sass">
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic);
 
 body {
@@ -39,19 +43,30 @@ body {
 	margin: 0;
 
 	#app {
-		.line-left, .line-right, .mid-line {
-			position: absolute;
-			bottom: 0;
-			top: 0;
-			left: 0;
-			right: 0;
-			margin: auto;
-			width: 1px;
-			height: 100vh;
-			background-color: rgba(#fff, 0.2);
-		}
-	}
+		// .line-left, .line-right, .mid-line {
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	top: 0;
+		// 	margin: auto;
+		// 	width: 1px;
+		// 	height: 100vh;
+		// 	background-color: rgba(#fff, 0.2);
+		// }
 
+		// .line-left {
+		// 	left: 25%;
+		// }
+
+		// .line-right {
+		// 	right: 25%;
+		// }
+
+		// .mid-line {
+		// 	right: 0;
+		// 	left: 0;
+		// }
+
+	}
 }
 
 </style>
