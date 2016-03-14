@@ -37,6 +37,9 @@
   </div>
 </div>
 
+<div id="videoTest">
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/tOgE-dnLHMM" frameborder="0" allowfullscreen></iframe>
+</div>
 </template>
 
 <script>
@@ -270,5 +273,9 @@ a:hover{
   color: #555555;
   opacity: 0.7;
   margin-bottom: 3px;
+}
+
+#videoTest{
+  margin-top: 10em;
 }
 </style>
