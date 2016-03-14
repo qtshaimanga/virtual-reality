@@ -28,7 +28,7 @@
 					<li>Google - Google Glasses</li>
 				</ul>
 			</div>
-		</div>		
+		</div>
 	</div>
 
 </div>
@@ -69,7 +69,7 @@ $grey-light: #cdcdcd;
 	// height: 80vh;
 	color: white;
 	box-sizing: border-box;
-	padding: 100px 90px;
+	padding: 100px 40px;
 
 	.title {
 		font-size: 40px;
@@ -82,7 +82,7 @@ $grey-light: #cdcdcd;
 			content: " ";
 			display: block;
 			width: 60px;
-			height: 7px; 
+			height: 7px;
 			position: absolute;
 			left: 0;
 			bottom: -10px;
@@ -104,7 +104,7 @@ $grey-light: #cdcdcd;
     	box-sizing: border-box;
 
     	.text {
-    		font-size: 20px;
+    		font-size: 18px;
     		color: $grey-light;
     	}
 

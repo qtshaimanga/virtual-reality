@@ -12,6 +12,7 @@
     <div v-for="articles in articlesList.data" id="art-{{$index}}">
 
         <div id="article" v-if="articles.description.length >0">
+            <p class="circle"></p>
             <img src="{{ articles.img }}"/>
             <h4 id="date">{{ articles.date }}</h4>
             <p><span id="{{ articles.tag }}">{{ articles.tag }}</span></p>
@@ -20,9 +21,8 @@
         </div>
 
         <div v-for="article in articles.articles">
-
             <div class="dates">
-              <h4 id="date">{{ article.mois }}</h4>
+              <h4 id="date">{{ article.date }}</h4>
             </div>
 
             <div  id="article">
@@ -32,7 +32,7 @@
               <h5>{{ article.description }}</h5>
               <p id="plus"><a href="{{ article.url }}" target="_blank">en savoir plus</a></p>
             </div>
-      </div>
+        </div>
     </div>
   </div>
 </div>
@@ -88,9 +88,15 @@ export default {
       if(select == "deselect"){
           event.target.setAttribute("selected", "select")
           event.target.setAttribute("class", "selected")
+
+          var height = (document.getElementById("app").offsetHeight - 6000);
+          console.log(height)
+          document.getElementById("line").style.height = height+"px";
+
       }else{
           event.target.setAttribute("selected", "deselect")
           event.target.setAttribute("class", "deselected")
+          document.getElementById("line").style.height = "32600px";
       }
 
       var btnSelect = document.getElementsByClassName("selected")
@@ -105,7 +111,6 @@ export default {
       }, function (response) {
           console.log("bad request /api/articles");
       });
-
     }
   }
 
@@ -127,7 +132,7 @@ $dark : #333333;
 
 /*--Timeline-Container--*/
 #timeline{
-	margin-top: 0.1em;
+	margin-top:20em;
 }
 
 /*--TAG--*/
@@ -191,7 +196,7 @@ p #marketing {  background-color: $bleu; padding:0.5em; }
   width: 27.5em;
   text-align: center;
   padding-bottom: 1em;
-  margin-bottom: 0em;
+  margin-bottom: 0.5em;
   margin-left: 5%;
 }
 
@@ -205,12 +210,18 @@ p #marketing {  background-color: $bleu; padding:0.5em; }
   margin-left: 20px;
 }
 
+.articles #article #date {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: -40px;
+}
+
 .dates{
   color: $gray;
   font-size: 35px;
   position: absolute;
   margin-top: 5%;
-  margin-left: 83%;
+  margin-left: 80%;
 }
 
 .circle {
@@ -229,7 +240,7 @@ p #marketing {  background-color: $bleu; padding:0.5em; }
   @if ($i%2 != 0) {
     .articles #art-#{$i} #article{
       margin-left: 60%;
-      margin-bottom: 0em;
+      margin-bottom: 0.5em;
     }
     .articles #art-#{$i} #article .circle{
       margin-top: 10%;

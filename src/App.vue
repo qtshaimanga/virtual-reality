@@ -4,7 +4,7 @@
 		<canvas id="canvas2" width="1000" height = "1000" style="position: absolute;"></canvas>
 
 		<div class="line-left"></div>
-		<div class="mid-line"></div>
+		<div id="line" class="midline"></div>
 		<div class="line-right"></div>
 			<intro></intro>
 			<informations></informations>
@@ -43,6 +43,7 @@ export default {
 		c2_context.lineTo(1000, height);
 		c2_context.strokeStyle = "white";
 		c2_context.stroke();
+
 	}
 }
 
@@ -58,7 +59,7 @@ body {
 	margin: 0;
 
 	#app {
-		.line-left, .line-right, .mid-line {
+		.midline {
 			position: absolute;
 			bottom: 0;
 			top: 0;
@@ -66,8 +67,9 @@ body {
 			right: 0;
 			margin: auto;
 			width: 1px;
-			height: 4000vh;											/*check the height*/
+			height: 4100vh;											/*check the height*/
 			background-color: rgba(#fff, 0.2);
+			z-index: -10;
 		}
 
 		// .line-left {
