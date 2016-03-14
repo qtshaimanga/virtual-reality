@@ -2,9 +2,19 @@ var data = require('../data');
 var _= require('lodash');
 
     exports.list = function list(req, res){
-        res.json(
+        /*res.json(
             data
-        );
+        );*/
+        var result = _(data).groupBy(function(row){
+            return row.date;
+        });
+        result = _(result).map(function(articles, dates) {
+              return {
+                  articles : articles,
+                  date : dates
+              }
+        });
+        res.json(result);
     }
 
     exports.findByTag = function findByTag(req, res) {

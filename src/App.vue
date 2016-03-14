@@ -1,12 +1,11 @@
 <template>
 <div id="app">
-	<div class="line-left"></div>
-	<div class="mid-line"></div>
-	<div class="line-right"></div>
-	<intro></intro>
-	<informations></informations>
-	<articles></articles>
-	<!--<img class="logo" src="./assets/logo.png">-->
+		<div class="line-left"></div>
+		<div class="mid-line"></div>
+		<div class="line-right"></div>
+			<intro></intro>
+			<informations></informations>
+			<articles></articles>
 </div>
 </template>
 
@@ -38,7 +37,7 @@ export default {
 
 body {
 	font-family: 'Open sans', sans-serif;
-	background-color: black;
+	background-color: gray;
 	margin: 0;
 
 	#app {
