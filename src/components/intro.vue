@@ -1,7 +1,9 @@
 <template>
 <div id="intro">
 	<div class="mid-line"></div>
-	<div class="mid-line big"><div class="circle"></div></div>
+	<div class="mid-line big">
+		<!-- <div class="circle"></div> -->
+	</div>
 
 	<div class="col-left">
 		<div class="line"></div>
@@ -116,24 +118,24 @@ $grey: #3e3e3e;
 		height: 100%;
 		background-color: rgba(#fff, 0.2);
 
-		&.big {
-			bottom: auto;
-			height: 50px;
-			width: 4px;
-			background-color: rgba(#fff, 1);
+		// &.big {
+		// 	bottom: auto;
+		// 	height: 50px;
+		// 	width: 4px;
+		// 	background-color: rgba(#fff, 1);
 
-			.circle {
-				box-sizing: border-box;
-				width: 40px;
-				height: 40px;
-				border: 4px solid #fff;
-				border-radius:50%;
-				position: absolute;
-				bottom: -38px;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}
+		// 	.circle {
+		// 		box-sizing: border-box;
+		// 		width: 40px;
+		// 		height: 40px;
+		// 		border: 4px solid #fff;
+		// 		border-radius:50%;
+		// 		position: absolute;
+		// 		bottom: -38px;
+		// 		left: 50%;
+		// 		transform: translateX(-50%);
+		// 	}
+		// }
 	}
 
 	.col-left, .col-right {
@@ -207,7 +209,7 @@ $grey: #3e3e3e;
 			box-sizing: border-box;
 			font-size: 20px;
 			margin: 60px auto 0px auto;
-			display: none;
+			display: block;
 		}
 
 		button.discover {

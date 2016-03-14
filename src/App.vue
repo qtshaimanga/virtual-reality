@@ -71,20 +71,6 @@ body {
 			background-color: rgba(#fff, 0.2);
 			z-index: -10;
 		}
-
-		// .line-left {
-		// 	left: 25%;
-		// }
-
-		// .line-right {
-		// 	right: 25%;
-		// }
-
-		// .mid-line {
-		// 	right: 0;
-		// 	left: 0;
-		// }
-
 	}
 }
 

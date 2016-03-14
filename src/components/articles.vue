@@ -63,21 +63,51 @@ export default {
           console.log("bad request /api/articles");
       });
 
-    var controllerInformations = new ScrollMagic.Controller();
 
-    var tl = new TimelineMax();
-    // var tween = new TweenMax();
-    // tween.set("#informations .col-left", {x: -1000});
+      setTimeout(function(){
+        window.sr = ScrollReveal();
+        sr.reveal('#art-0');
+        sr.reveal('#art-1');
+        sr.reveal('#art-2');
+        sr.reveal('#art-3');
+        sr.reveal('#art-4');
+        sr.reveal('#art-5');
+        sr.reveal('#art-6');
+        sr.reveal('#art-7');
+        sr.reveal('#art-8');
+        sr.reveal('#art-9');
+        sr.reveal('#art-10');
+        sr.reveal('#art-11');
+        sr.reveal('#art-12');
+        sr.reveal('#art-13');
+        sr.reveal('#art-14');
+        sr.reveal('#art-15');
+        sr.reveal('#art-16');
+        sr.reveal('#art-17');
+        sr.reveal('#art-18');
+        sr.reveal('#art-19');
+        sr.reveal('#art-20');
+        sr.reveal('#art-21');
+        sr.reveal('#art-22');
+        sr.reveal('#art-23');
+        sr.reveal('#art-24');
+        sr.reveal('#art-25');
+        sr.reveal('#art-26');
+        sr.reveal('#art-27');
+        sr.reveal('#art-28');
+        sr.reveal('#art-29');
+        sr.reveal('#art-30');
+        sr.reveal('#art-31');
+        sr.reveal('#art-32');
+        sr.reveal('#art-33');
+        sr.reveal('#art-34');
+        sr.reveal('#art-35');
+        sr.reveal('#art-36');
+        sr.reveal('#art-37');
+        sr.reveal('#art-38');
+        sr.reveal('#art-39');
+    }, 100);
 
-    tl.fromTo("#informations .col-left", 1, {opacity: 0, x:-100}, {opacity: 1, x: 0, ease: Power4.easeInOut}, "tag")
-    .fromTo("#informations .col-right", 1, {opacity: 0, x:100}, {opacity: 1, x: 0, ease: Power4.easeInOut}, "tag")
-    ;
-
-    new ScrollMagic.Scene({
-      triggerElement: "#informations .title"
-    })
-    .setTween(tl)
-    .addTo(controllerInformations);
 
   },
   methods: {
