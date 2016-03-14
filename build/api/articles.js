@@ -31,6 +31,16 @@ var _= require('lodash');
                   })
               .value()
         );
+
+        result = _(data).groupBy(function(row){
+            return row.date;
+        });
+        result = _(result).map(function(articles, dates) {
+              return {
+                  articles : articles,
+                  date : dates
+              }
+        });
         res.json(resultat);
     }
 
