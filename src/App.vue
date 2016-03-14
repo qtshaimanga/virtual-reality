@@ -4,7 +4,7 @@
 		<canvas id="canvas2" width="1000" height = "1000" style="position: absolute;"></canvas>
 
 		<div class="line-left"></div>
-		<div class="mid-line"></div>
+		<div id="line" class="midline"></div>
 		<div class="line-right"></div>
 			<intro></intro>
 			<informations></informations>
@@ -29,7 +29,7 @@ export default {
 	},
 	ready: function() {
 
-			var height = app.offsetHeight
+			var height = app.offsetHeight;
 			var c1 = document.getElementById("canvas");
 			var c1_context = c1.getContext("2d");
 			c1_context.moveTo(300, 0);
@@ -63,7 +63,7 @@ body {
 	margin: 0;
 
 	#app {
-		.line-left, .line-right, .mid-line {
+		.midline {
 			position: absolute;
 			bottom: 0;
 			top: 0;
@@ -71,8 +71,9 @@ body {
 			right: 0;
 			margin: auto;
 			width: 1px;
-			height: 4000vh;											/*check the height*/
+			height: 4850vh;											/*check the height*/
 			background-color: rgba(#fff, 0.2);
+			z-index: -10;
 		}
 
 		// .line-left {

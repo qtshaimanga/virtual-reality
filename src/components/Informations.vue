@@ -45,7 +45,7 @@ $grey: #3e3e3e;
 	height: 60vh;
 	color: white;
 	box-sizing: border-box;
-	padding: 100px 90px;
+	padding: 100px 40px;
 
 	.title {
 		font-size: 40px;
@@ -57,7 +57,7 @@ $grey: #3e3e3e;
 			content: " ";
 			display: block;
 			width: 60px;
-			height: 6px; 
+			height: 6px;
 			position: absolute;
 			left: 0;
 			bottom: -20px;
