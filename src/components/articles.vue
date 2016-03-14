@@ -138,6 +138,7 @@ $dark : #333333;
   font-size: 14px;
   border-shadow: none;
   border:none;
+  outline: none;
 }
 
 .tag button:hover {
