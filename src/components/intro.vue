@@ -5,7 +5,7 @@
 
 	<div class="col-left">
 		<div class="line"></div>
-		<div class="objet"></div>
+		<div id="geometry"></div>
 		<div class="name kirgan">Kirgan Somville</div>
 		<div class="name quentin">Quentin Tsmga</div>
 		<div class="name lovis">Lovis Odin</div>
@@ -13,16 +13,16 @@
 	</div><!--
 	--><div class="col-right">
 		<div class="line"></div>
-		<h1>WHAT'S NEW IN VIRTUAL REALITY</h1>
+		<h1>WHAT'S NEW IN VIRTUAL REALITY ?</h1>
 		<div class="text">
 			<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula porta enim, lobortis sagittis tortor volutpat in. Phasellus non rutrum lorem.
+				Nous avons passé ces derniers mois à observer le milieu de la  réalité virtuelle et augmentée de près.
 			</p>
 			<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula porta enim, lobortis sagittis tortor volutpat in. Phasellus non rutrum lorem.
+				À travers ce site, nous vous proposons de retracer l’évolution de cette technologie sur les six derniers mois.
 			</p>
 			<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vehicula porta enim, lobortis sagittis tortor volutpat in. Phasellus non rutrum lorem.
+				Êtes vous prêts ?
 			</p>
 		</div>
 		<button class="discover">Discover</button>
@@ -30,7 +30,17 @@
 </div>
 </template>
 
-<script></script>
+<script>
+	// import './geometry.js';
+	
+export default {
+	ready: function() {
+
+	}
+}
+
+
+</script>
 
 <style lang="sass">
 $grey: #3e3e3e;
@@ -92,9 +102,14 @@ $grey: #3e3e3e;
 	}
 
 	.col-left {
+		.geometry {
+			// background: url('geometry.png') no-repeat;
+		}
+
 		.name {
 			font-size: 24px;
 			position: absolute;
+			display: none;
 
 			&.kirgan {
 				bottom: 40%;
@@ -127,14 +142,18 @@ $grey: #3e3e3e;
 		box-sizing: border-box;
 
 		h1 {
-			font-size: 60px;
+			font-size: 80px;
+			font-style: italic;
 			color: $grey;
+			margin: 0;
 			text-transform: uppercase;
 		}
 
 		.text {
-			font-size: 16px;
-			margin: 0 auto 20px auto;
+			box-sizing: border-box;
+			font-size: 20px;
+			margin: 60px auto 0px auto;
+			display: none;
 		}
 
 		button.discover {
@@ -144,15 +163,16 @@ $grey: #3e3e3e;
 			border: 2px solid rgba(#ffffff, 0.5);
 			background-color: rgba(0,0,0,0);
 			color: rgba(#ffffff, 0.5);
-			font-size: 16px;
+			font-size: 20px;
 			position: absolute;
-			bottom: 50px;
+			bottom: 75px;
 			left: 50%;
 			transform: translateX(-50%);
 			margin: 0 auto;
 			outline: none;
 			cursor: pointer;
 			transition: background-color 250ms ease-out,color 250ms ease-out;
+			display: none;
 
 			&:hover {
 				color: rgba(#ffffff, 1);
