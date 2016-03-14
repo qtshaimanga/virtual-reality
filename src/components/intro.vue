@@ -123,7 +123,7 @@ $grey: #3e3e3e;
 	}
 
 	.col-right {
-		padding: 20px 40px;
+		padding: 20px 60px;
 		box-sizing: border-box;
 
 		h1 {

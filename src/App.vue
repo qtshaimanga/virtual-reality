@@ -18,6 +18,7 @@
 import Intro from './components/Intro'
 import Informations from './components/Informations'
 import Articles from './components/Articles'
+import $ from 'jquery'
 
 export default {
 
@@ -28,6 +29,7 @@ export default {
 	},
 
 	ready: function() {
+
 			var height = app.offsetHeight
 			var c1 = document.getElementById("canvas");
 			var c1_context = c1.getContext("2d");
@@ -42,6 +44,11 @@ export default {
 			c2_context.lineTo(1000, height);
 			c2_context.strokeStyle = "white";
 			c2_context.stroke();
+
+		// var totalHeight = $("#intro").height() + $("#informations").height() + $("#timeline").height();
+		// console.log($("#timeline").height());
+
+		// $(".line-left, .line-right, .mid-line:not(.big)").css("height", totalHeight);
 	}
 }
 
@@ -65,11 +72,24 @@ body {
 			right: 0;
 			margin: auto;
 			width: 1px;
-			height: 4000vh;										/*check the height*/
+			height: 4000vh;											/*check the height*/
 			background-color: rgba(#fff, 0.2);
 		}
-	}
 
+		// .line-left {
+		// 	left: 25%;
+		// }
+
+		// .line-right {
+		// 	right: 25%;
+		// }
+
+		// .mid-line {
+		// 	right: 0;
+		// 	left: 0;
+		// }
+
+	}
 }
 
 canvas {

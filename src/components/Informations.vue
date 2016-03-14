@@ -44,17 +44,25 @@ $grey: #3e3e3e;
 	width: 100%;
 	height: 60vh;
 	color: white;
+	box-sizing: border-box;
+	padding: 100px 90px;
 
-	.mid-line {
-		position: absolute;
-		bottom: 0;
-		top: 0;
-		left: 0;
-		right: 0;
-		margin: auto;
-		width: 1px;
-		height: 100%;
-		background-color: rgba(#fff, 0.2);
+	.title {
+		font-size: 40px;
+		color: $grey;
+		text-transform: uppercase;
+		position: relative;
+
+		&:after {
+			content: " ";
+			display: block;
+			width: 60px;
+			height: 6px; 
+			position: absolute;
+			left: 0;
+			bottom: -20px;
+			background-color: #ffffff;
+		}
 	}
 
 	.col-left, .col-right {
@@ -63,6 +71,8 @@ $grey: #3e3e3e;
 		vertical-align: top;
 		position: relative;
 		height: 100%;
+		padding: 20px 60px;
+    	box-sizing: border-box;
 
 		.line {
 			position: absolute;
@@ -78,11 +88,27 @@ $grey: #3e3e3e;
 	}
 
 	.col-left {
+		.img {
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			background-url: url("../assets/vr.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
 	}
 
 	.col-right {
-		padding: 20px 40px;
-		box-sizing: border-box;
+		.img {
+			width: 300px;
+			height: 300px;
+			margin: 0 auto;
+			background-url: url("../assets/vr.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
 
 		.text {
 			font-size: 16px;
