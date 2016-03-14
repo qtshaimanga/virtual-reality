@@ -1,20 +1,33 @@
 <template>
-  <div id="app">
-    <articles></articles>
-  </div>
+<div id="app">
+	<div class="line-left"></div>
+	<div class="mid-line"></div>
+	<div class="line-right"></div>
+	<intro></intro>
+	<informations></informations>
+	<articles></articles>
+	<!--<img class="logo" src="./assets/logo.png">-->
+</div>
 </template>
 
 
 <script>
 
-import Articles from './components/Articles'
 import Intro from './components/Intro'
+import Informations from './components/Informations'
+import Articles from './components/Articles'
 
 export default {
-  components: {
-    Articles,
-    Intro
-  }
+
+	components: {
+		Intro,
+    Informations,
+    Articles
+	},
+
+	ready: function() {
+
+	}
 }
 
 </script>
@@ -27,6 +40,21 @@ body {
 	font-family: 'Open sans', sans-serif;
 	background-color: black;
 	margin: 0;
+
+	#app {
+		.line-left, .line-right, .mid-line {
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 1px;
+			height: 100vh;
+			background-color: rgba(#fff, 0.2);
+		}
+	}
+
 }
 
 </style>

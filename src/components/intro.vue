@@ -35,7 +35,6 @@
 <style lang="sass">
 $grey: #3e3e3e;
 
-
 #intro {
 	width: 100%;
 	height: 100vh;
@@ -79,17 +78,17 @@ $grey: #3e3e3e;
 		position: relative;
 		height: 100%;
 
-		.line {
-			position: absolute;
-			bottom: 0;
-			top: 0;
-			left: 0;
-			right: 0;
-			margin: auto;
-			width: 1px;
-			height: 100vh;
-			background-color: rgba(#fff, 0.2);
-		}
+		// .line {
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	margin: auto;
+		// 	width: 1px;
+		// 	height: 100vh;
+		// 	background-color: rgba(#fff, 0.2);
+		// }
 	}
 
 	.col-left {
