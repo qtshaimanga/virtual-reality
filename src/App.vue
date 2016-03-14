@@ -27,7 +27,6 @@ export default {
     Informations,
     Articles
 	},
-
 	ready: function() {
 
 			var height = app.offsetHeight
