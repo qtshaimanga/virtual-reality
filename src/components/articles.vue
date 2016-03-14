@@ -66,6 +66,52 @@ export default {
           console.log("bad request /api/articles");
       });
 
+
+      setTimeout(function(){
+        window.sr = ScrollReveal();
+        sr.reveal('#art-0');
+        sr.reveal('#art-1');
+        sr.reveal('#art-2');
+        sr.reveal('#art-3');
+        sr.reveal('#art-4');
+        sr.reveal('#art-5');
+        sr.reveal('#art-6');
+        sr.reveal('#art-7');
+        sr.reveal('#art-8');
+        sr.reveal('#art-9');
+        sr.reveal('#art-10');
+        sr.reveal('#art-11');
+        sr.reveal('#art-12');
+        sr.reveal('#art-13');
+        sr.reveal('#art-14');
+        sr.reveal('#art-15');
+        sr.reveal('#art-16');
+        sr.reveal('#art-17');
+        sr.reveal('#art-18');
+        sr.reveal('#art-19');
+        sr.reveal('#art-20');
+        sr.reveal('#art-21');
+        sr.reveal('#art-22');
+        sr.reveal('#art-23');
+        sr.reveal('#art-24');
+        sr.reveal('#art-25');
+        sr.reveal('#art-26');
+        sr.reveal('#art-27');
+        sr.reveal('#art-28');
+        sr.reveal('#art-29');
+        sr.reveal('#art-30');
+        sr.reveal('#art-31');
+        sr.reveal('#art-32');
+        sr.reveal('#art-33');
+        sr.reveal('#art-34');
+        sr.reveal('#art-35');
+        sr.reveal('#art-36');
+        sr.reveal('#art-37');
+        sr.reveal('#art-38');
+        sr.reveal('#art-39');
+    }, 100);
+
+
   },
   methods: {
     selectedTags: function (event) {
@@ -167,13 +213,13 @@ $dark : #333333;
 
 
 /*--ARTICLES--*/
-p #business { background-color: $bleu; padding:0.5em; text-transform:uppercase;}
-p #art {  background-color: $rouge; padding:0.5em; text-transform:uppercase;}
-p #jeu {  background-color: $violet; padding:0.5em; text-transform:uppercase;}
-p #tech { background-color: $saumon; padding:0.5em; text-transform:uppercase;}
-p #insolite {  background-color: $rose; padding:0.5em; text-transform:uppercase;}
-p #social {  background-color: $vert; padding:0.5em; text-transform:uppercase;}
-p #marketing {  background-color: $bleu; padding:0.5em; text-transform:uppercase;}
+p #business { background-color: $bleu; padding:0.5em;}
+p #art {  background-color: $rouge; padding:0.5em;}
+p #jeu {  background-color: $violet; padding:0.5em;}
+p #tech { background-color: $saumon; padding:0.5em; }
+p #insolite {  background-color: $rose; padding:0.5em; }
+p #social {  background-color: $vert; padding:0.5em; }
+p #marketing {  background-color: $bleu; padding:0.5em; }
 
 .articles #article{
   color: $gray;
@@ -195,7 +241,6 @@ p #marketing {  background-color: $bleu; padding:0.5em; text-transform:uppercase
 .articles #article h5 {
   text-align: left;
   margin-left: 20px;
-  margin-right: 20px;
 }
 
 .articles #article #date {

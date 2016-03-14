@@ -39,9 +39,7 @@
 export default {
 	ready: function() {
 
-		console.log("ready");
-
-		var controller = new ScrollMagic.Controller();
+		var controllerInformations = new ScrollMagic.Controller();
 
 		var tl = new TimelineMax();
 		// var tween = new TweenMax();
@@ -54,11 +52,8 @@ export default {
 		new ScrollMagic.Scene({
 			triggerElement: "#informations .title"
 		})
-		.on("enter", function(){
-			console.log("douche");
-		})
 		.setTween(tl)
-		.addTo(controller);
+		.addTo(controllerInformations);
 	}
 }
 
@@ -71,7 +66,7 @@ $grey-light: #cdcdcd;
 
 #informations {
 	width: 100%;
-	height: 100vh;
+	// height: 80vh;
 	color: white;
 	box-sizing: border-box;
 	padding: 100px 40px;

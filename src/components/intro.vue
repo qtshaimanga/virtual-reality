@@ -1,11 +1,14 @@
 <template>
 <div id="intro">
 	<div class="mid-line"></div>
-	<div class="mid-line big"><div class="circle"></div></div>
+	<div class="mid-line big">
+		<!-- <div class="circle"></div> -->
+	</div>
 
 	<div class="col-left">
 		<div class="line"></div>
 		<div id="geometry"></div>
+		<img src="../assets/geometry.png" />
 		<div class="name kirgan">Kirgan Somville</div>
 		<div class="name quentin">Quentin Tsmga</div>
 		<div class="name lovis">Lovis Odin</div>
@@ -31,12 +34,66 @@
 </template>
 
 <script>
-	// import './geometry.js';
-	
+import $ from 'jquery'
+
 export default {
 	ready: function() {
 
-	}
+
+		var container = $('#geometry');
+		var renderer = new THREE.WebGLRenderer({antialias: true});
+		var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 10000);
+		var scene = new THREE.Scene();
+
+		scene.add(camera);
+		renderer.setSize(800, 800);
+		container.append(renderer.domElement);
+
+		// Camera
+		camera.position.z = 200;
+
+		// Material
+		var pinkMat = new THREE.MeshPhongMaterial({
+			color      :  new THREE.Color("rgb(62, 62, 62)"),
+			emissive   :  new THREE.Color("rgb(0, 0, 0)"),
+			specular   :  new THREE.Color("rgba(62, 62, 62)"),
+			shininess  :  10,
+			shading    :  THREE.FlatShading,
+			transparent: 1,
+			opacity    : 1
+		});
+
+		var L1 = new THREE.PointLight(0xffffff, 1);
+		L1.position.z = 100;
+		L1.position.y = 100;
+		L1.position.x = 100;
+		scene.add(L1);
+
+		var L2 = new THREE.PointLight(0xffffff, 0.8);
+		L2.position.z = 200;
+		L2.position.y = 50;
+		L2.position.x = -100;
+		scene.add(L2);
+
+		// IcoSphere -> THREE.IcosahedronGeometry(80, 1) 1-4
+		var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(75, 1), pinkMat);
+		Ico.rotation.z = 0.5;
+		scene.add(Ico);
+
+		function update(){
+		Ico.rotation.x+=2/100;
+		Ico.rotation.y+=2/100;
+		}
+
+		// Render
+		function render() {
+		requestAnimationFrame(render);      
+		renderer.render(scene, camera); 
+		update();
+		}
+
+		render();
+		}
 }
 
 
@@ -61,24 +118,24 @@ $grey: #3e3e3e;
 		height: 100%;
 		background-color: rgba(#fff, 0.2);
 
-		&.big {
-			bottom: auto;
-			height: 50px;
-			width: 4px;
-			background-color: rgba(#fff, 1);
+		// &.big {
+		// 	bottom: auto;
+		// 	height: 50px;
+		// 	width: 4px;
+		// 	background-color: rgba(#fff, 1);
 
-			.circle {
-				box-sizing: border-box;
-				width: 40px;
-				height: 40px;
-				border: 4px solid #fff;
-				border-radius:50%;
-				position: absolute;
-				bottom: -38px;
-				left: 50%;
-				transform: translateX(-50%);
-			}
-		}
+		// 	.circle {
+		// 		box-sizing: border-box;
+		// 		width: 40px;
+		// 		height: 40px;
+		// 		border: 4px solid #fff;
+		// 		border-radius:50%;
+		// 		position: absolute;
+		// 		bottom: -38px;
+		// 		left: 50%;
+		// 		transform: translateX(-50%);
+		// 	}
+		// }
 	}
 
 	.col-left, .col-right {
@@ -87,29 +144,28 @@ $grey: #3e3e3e;
 		vertical-align: top;
 		position: relative;
 		height: 100%;
-
-		// .line {
-		// 	position: absolute;
-		// 	bottom: 0;
-		// 	top: 0;
-		// 	left: 0;
-		// 	right: 0;
-		// 	margin: auto;
-		// 	width: 1px;
-		// 	height: 100vh;
-		// 	background-color: rgba(#fff, 0.2);
-		// }
 	}
 
 	.col-left {
-		.geometry {
-			// background: url('geometry.png') no-repeat;
+
+		#geometry {
+			z-index:  10;
+			position: absolute
+		}
+
+		img {
+			width: 475px;
+			display: none;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
 		}
 
 		.name {
-			font-size: 24px;
+			font-size: 30px;
 			position: absolute;
-			display: none;
+			// display: none;
 
 			&.kirgan {
 				bottom: 40%;
@@ -153,7 +209,7 @@ $grey: #3e3e3e;
 			box-sizing: border-box;
 			font-size: 20px;
 			margin: 60px auto 0px auto;
-			display: none;
+			display: block;
 		}
 
 		button.discover {
