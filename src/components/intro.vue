@@ -36,18 +36,6 @@ import $ from 'jquery'
 
 export default {
 	ready: function() {
-		console.log("ready");
-
-		var controllerInformations = new ScrollMagic.Controller();
-
-		var tl = new TimelineMax();
-		// var tween = new TweenMax();
-		// tween.set("#informations .col-left", {x: -1000});
-
-		tl.fromTo("#intro .col-left img", 1, {opacity: 0}, {opacity: 1, ease: Power4.easeInOut}, "intro")
-		.fromTo("#intro .col-right", 1, {opacity: 0, x:100}, {opacity: 1, x: 0, ease: Power4.easeInOut}, "intro")
-		;
-
 
 
 		var container = $('#geometry');
@@ -157,9 +145,15 @@ $grey: #3e3e3e;
 	}
 
 	.col-left {
+
+		#geometry {
+			z-index:  10;
+			position: absolute
+		}
+
 		img {
 			width: 475px;
-			display: block;
+			display: none;
 			position: absolute;
 			left: 0;
 			right: 0;
@@ -167,9 +161,9 @@ $grey: #3e3e3e;
 		}
 
 		.name {
-			font-size: 24px;
+			font-size: 30px;
 			position: absolute;
-			display: none;
+			// display: none;
 
 			&.kirgan {
 				bottom: 40%;

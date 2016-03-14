@@ -63,6 +63,22 @@ export default {
           console.log("bad request /api/articles");
       });
 
+    var controllerInformations = new ScrollMagic.Controller();
+
+    var tl = new TimelineMax();
+    // var tween = new TweenMax();
+    // tween.set("#informations .col-left", {x: -1000});
+
+    tl.fromTo("#informations .col-left", 1, {opacity: 0, x:-100}, {opacity: 1, x: 0, ease: Power4.easeInOut}, "tag")
+    .fromTo("#informations .col-right", 1, {opacity: 0, x:100}, {opacity: 1, x: 0, ease: Power4.easeInOut}, "tag")
+    ;
+
+    new ScrollMagic.Scene({
+      triggerElement: "#informations .title"
+    })
+    .setTween(tl)
+    .addTo(controllerInformations);
+
   },
   methods: {
     selectedTags: function (event) {
@@ -138,7 +154,6 @@ $dark : #333333;
   font-size: 14px;
   border-shadow: none;
   border:none;
-  outline: none;
 }
 
 .tag button:hover {
@@ -160,13 +175,13 @@ $dark : #333333;
 
 
 /*--ARTICLES--*/
-p #business { background-color: $bleu; padding:0.5em; text-transform:uppercase;}
-p #art {  background-color: $rouge; padding:0.5em; text-transform:uppercase;}
-p #jeu {  background-color: $violet; padding:0.5em; text-transform:uppercase;}
-p #tech { background-color: $saumon; padding:0.5em; text-transform:uppercase;}
-p #insolite {  background-color: $rose; padding:0.5em; text-transform:uppercase;}
-p #social {  background-color: $vert; padding:0.5em; text-transform:uppercase;}
-p #marketing {  background-color: $bleu; padding:0.5em; text-transform:uppercase;}
+p #business { background-color: $bleu; padding:0.5em;}
+p #art {  background-color: $rouge; padding:0.5em;}
+p #jeu {  background-color: $violet; padding:0.5em;}
+p #tech { background-color: $saumon; padding:0.5em; }
+p #insolite {  background-color: $rose; padding:0.5em; }
+p #social {  background-color: $vert; padding:0.5em; }
+p #marketing {  background-color: $bleu; padding:0.5em; }
 
 .articles #article{
   color: $gray;
@@ -188,7 +203,6 @@ p #marketing {  background-color: $bleu; padding:0.5em; text-transform:uppercase
 .articles #article h5 {
   text-align: left;
   margin-left: 20px;
-  margin-right: 20px;
 }
 
 .dates{
