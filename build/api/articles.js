@@ -14,6 +14,7 @@ var _= require('lodash');
                   date : dates
               }
         });
+        result = result.reverse();
         res.json(result);
     }
 
@@ -41,6 +42,7 @@ var _= require('lodash');
                   date : dates
               }
         });
+        resultat = resultat.reverse();
         res.json(resultat);
     }
 

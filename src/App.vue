@@ -1,5 +1,8 @@
 <template>
 <div id="app">
+		<canvas id="canvas" width="1000" height = "1000" style="position: absolute;"></canvas>
+		<canvas id="canvas2" width="1000" height = "1000" style="position: absolute;"></canvas>
+
 		<div class="line-left"></div>
 		<div class="mid-line"></div>
 		<div class="line-right"></div>
@@ -25,7 +28,20 @@ export default {
 	},
 
 	ready: function() {
+			var height = app.offsetHeight
+			var c1 = document.getElementById("canvas");
+			var c1_context = c1.getContext("2d");
+			c1_context.moveTo(300, 0);
+			c1_context.lineTo(300, height);
+			c1_context.strokeStyle = "white";
+			c1_context.stroke();
 
+			var c2 = document.getElementById("canvas2");
+			var c2_context = c2.getContext("2d");
+			c2_context.moveTo(1000, 0);
+			c2_context.lineTo(1000, height);
+			c2_context.strokeStyle = "white";
+			c2_context.stroke();
 	}
 }
 
@@ -37,7 +53,7 @@ export default {
 
 body {
 	font-family: 'Open sans', sans-serif;
-	background-color: gray;
+	background-color: black;
 	margin: 0;
 
 	#app {
@@ -49,11 +65,15 @@ body {
 			right: 0;
 			margin: auto;
 			width: 1px;
-			height: 100vh;
+			height: 4000vh;										/*check the height*/
 			background-color: rgba(#fff, 0.2);
 		}
 	}
 
+}
+
+canvas {
+	opacity: 0.3;
 }
 
 </style>

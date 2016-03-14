@@ -1,5 +1,6 @@
 <template>
 <div id="timeline">
+  <div id="titre"><h1>TIMELINE</h1></div>
 
   <div class="tags">
     <div class="tag" v-for="tag in tagsList.data">
@@ -13,21 +14,23 @@
         <div id="article" v-if="articles.description.length >0">
             <img src="{{ articles.img }}"/>
             <h4 id="date">{{ articles.date }}</h4>
-            <p>{{ articles.tag }}</p>
+            <p><span id="{{ articles.tag }}">{{ articles.tag }}</span></p>
             <h5>{{ articles.description }}</h5>
-            <a href="{{ articles.url }}">titre</a>
+            <p id="plus"><a href="{{ articles.url }}" target="_blank">en savoir plus</a><p>
         </div>
 
         <div v-for="article in articles.articles">
-            <div class="dates" v-if="article.description.length >0">
-              <h4 id="date">{{ articles.date }}</h4>
+
+            <div class="dates">
+              <h4 id="date">{{ article.mois }}</h4>
             </div>
-            <div  id="article" >
+
+            <div  id="article">
+              <p class="circle"></p>
               <img src="{{ article.img }}"/>
-              <h4>{{ article.date }}</h4>
-              <p>{{ article.tag }}</p>
+              <p><span id="{{ article.tag }}">{{ article.tag }}</span></p>
               <h5>{{ article.description }}</h5>
-              <a href="{{ article.url }}">titre</a>
+              <p id="plus"><a href="{{ article.url }}" target="_blank">en savoir plus</a></p>
             </div>
       </div>
     </div>
@@ -50,7 +53,6 @@ export default {
   },
 
   ready: function() {
-
       this.$http({url:'./tags', method: 'GET'}).then(function (response) {
           this.$set('tagsList', response)
       }, function (response) {
@@ -107,17 +109,14 @@ $violet: #8660A9;
 $bleu: #08AAEC;
 $saumon: #FAAD81;
 $rose: #F49AC1;
-
-
+$dark : #333333;
 
 /*--Timeline-Container--*/
 #timeline{
 	margin-top: 0.1em;
 }
 
-
 /*--TAG--*/
-
 .tags{
   width:auto;
   text-align: center;
@@ -161,40 +160,71 @@ $rose: #F49AC1;
 }
 
 
-/*--ARTICLE--*/
-
-.articles{
-
-}
+/*--ARTICLES--*/
+p #business { background-color: $bleu; padding:0.5em;}
+p #art {  background-color: $rouge; padding:0.5em;}
+p #jeu {  background-color: $violet; padding:0.5em;}
+p #tech { background-color: $saumon; padding:0.5em; }
+p #insolite {  background-color: $rose; padding:0.5em; }
+p #social {  background-color: $vert; padding:0.5em; }
+p #marketing {  background-color: $bleu; padding:0.5em; }
 
 .articles #article{
   color: $gray;
-  border-style: solid;
+  background-color: $dark;
+  border-style: none;
   border-color: white;
-  width: 28em;
-  margin: 1em;
+  width: 27.5em;
   text-align: center;
+  padding-bottom: 1em;
+  margin-bottom: 0em;
   margin-left: 5%;
 }
 
+.articles #article p {
+  margin-right: 20px;
+  text-align: right;
+}
+
+.articles #article h5 {
+  text-align: left;
+  margin-left: 20px;
+}
+
 .dates{
+  color: $gray;
+  font-size: 35px;
   position: absolute;
-  margin-top: 7%;
-  margin-left: 70%;
+  margin-top: 5%;
+  margin-left: 83%;
+}
+
+.circle {
+    position: absolute;
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid #F5F5F5;
+    height:15px;
+    width:15px;
+    -webkit-border-radius:75px;
+    -moz-border-radius:75px;
+    margin-top: 10%;
+    margin-left: 44.2%;
 }
 
 @for $i from 0 through 100 {
   @if ($i%2 != 0) {
     .articles #art-#{$i} #article{
-      color: red;
       margin-left: 60%;
+      margin-bottom: 0em;
     }
-
+    .articles #art-#{$i} #article .circle{
+      margin-top: 10%;
+      margin-left: -10.8%;
+    }
     .articles #art-#{$i} .dates{
-      color: red;
       position: absolute;
-      margin-top: 8%;
-      margin-left: 20%;
+      margin-top: 5%;
+      margin-left: 5%;
     }
   }
 }
@@ -202,6 +232,33 @@ $rose: #F49AC1;
 .articles #article img{
   width: 400px;
   height: auto;
+  margin-top: 20px;
 }
 
+.articles #article #plus {
+  text-align: left;
+  margin-left: 20px;
+}
+a {
+  color: $gray;
+  text-decoration: none;
+  font-size: 12px;
+}
+a:hover{
+  color: #999999
+}
+
+#titre{
+  border-bottom: solid 7px white;
+  width: 5em;
+  margin-bottom: 4em;
+  margin-left: 40px;
+}
+#titre h1{
+  letter-spacing: 2px;
+  font-size: 40px;
+  color: #555555;
+  opacity: 0.7;
+  margin-bottom: 3px;
+}
 </style>

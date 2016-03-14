@@ -42,7 +42,7 @@ $grey: #3e3e3e;
 
 #informations {
 	width: 100%;
-	height: 100vh;
+	height: 60vh;
 	color: white;
 
 	.mid-line {

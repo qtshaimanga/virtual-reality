@@ -4,7 +4,7 @@ var fs = require("fs");
 var csvConverter = new Converter({
 	constructResult:true,
 	delimiter:",",
-	headers: ["date", "url", "description", "tag", "img", "video"]
+	headers: ["date", "url", "description", "tag", "img", "video", "mois" ]
 });
 
 var readStream = fs.createReadStream("./build/data/articles.csv", {encoding: 'utf8'});
