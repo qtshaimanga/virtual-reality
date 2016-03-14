@@ -36,6 +36,31 @@
 
 <script>
 
+export default {
+	ready: function() {
+
+		console.log("ready");
+
+		var controller = new ScrollMagic.Controller();
+
+		var tl = new TimelineMax();
+		// var tween = new TweenMax();
+		// tween.set("#informations .col-left", {x: -1000});
+
+		tl.fromTo("#informations .col-left", 1, {opacity: 0, x:-100}, {opacity: 1, x: 0, ease: Power4.easeInOut}, "tag")
+		.fromTo("#informations .col-right", 1, {opacity: 0, x:100}, {opacity: 1, x: 0, ease: Power4.easeInOut}, "tag")
+		;
+
+		new ScrollMagic.Scene({
+			triggerElement: "#informations .title"
+		})
+		.on("enter", function(){
+			console.log("douche");
+		})
+		.setTween(tl)
+		.addTo(controller);
+	}
+}
 
 </script>
 

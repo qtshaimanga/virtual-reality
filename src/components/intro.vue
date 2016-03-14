@@ -32,6 +32,7 @@
 
 <script>
 	// import './geometry.js';
+	
 export default {
 	ready: function() {
 

@@ -1,14 +1,14 @@
 import $ from 'jquery';
 
 export default {
-  var $container = $('#geometry');
+  var container = $('#geometry');
   var renderer = new THREE.WebGLRenderer({antialias: true});
   var camera = new THREE.PerspectiveCamera(80,1,0.1,10000);
   var scene = new THREE.Scene();
 
   scene.add(camera);
   renderer.setSize(800, 800);
-  $container.append(renderer.domElement);
+  container.append(renderer.domElement);
 
   ///////////////////////////////////////////////
 
