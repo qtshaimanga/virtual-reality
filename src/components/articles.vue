@@ -73,14 +73,14 @@ export default {
           event.target.setAttribute("selected", "select")
           event.target.setAttribute("class", "selected")
 
-          var height = (document.getElementById("app").offsetHeight - 7000);
+          var height = (document.getElementById("app").offsetHeight - 6000);
           console.log(height)
           document.getElementById("line").style.height = height+"px";
 
       }else{
           event.target.setAttribute("selected", "deselect")
           event.target.setAttribute("class", "deselected")
-          document.getElementById("line").style.height = "31000px";
+          document.getElementById("line").style.height = "32600px";
       }
 
       var btnSelect = document.getElementsByClassName("selected")
@@ -116,7 +116,7 @@ $dark : #333333;
 
 /*--Timeline-Container--*/
 #timeline{
-	margin-top:10em;
+	margin-top:20em;
 }
 
 /*--TAG--*/

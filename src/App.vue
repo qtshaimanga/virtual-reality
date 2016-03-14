@@ -67,7 +67,7 @@ body {
 			right: 0;
 			margin: auto;
 			width: 1px;
-			height: 4850vh;											/*check the height*/
+			height: 4100vh;											/*check the height*/
 			background-color: rgba(#fff, 0.2);
 			z-index: -10;
 		}

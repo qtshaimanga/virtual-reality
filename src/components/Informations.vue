@@ -109,7 +109,7 @@ $grey-light: #cdcdcd;
     	box-sizing: border-box;
 
     	.text {
-    		font-size: 20px;
+    		font-size: 18px;
     		color: $grey-light;
     	}
 
